@@ -13,7 +13,6 @@ Servo servoNumber1;
 //constants
 const int TRIG_PIN = 3;  
 const int ECHO_PIN = 2; 
-const int SPEED_OF_LIGHT = 0.0343;
 
 //variables
 float duration, distance;  
@@ -44,14 +43,13 @@ void loop() {
   //reads the echo pin, returns the sound wave travel time in microseconds
   duration = pulseIn(ECHO_PIN, HIGH);  
 
-  distance = (duration*SPEED_OF_LIGHT)/2;
+  distance = duration*0.017;
   
   if (distance < 50){
   	servoNumber1.write(90);
-  	delay(1000);
-  }
-  else {
+  	delay(500);
     servoNumber1.write(0);
-  	delay(1000);
+  	delay(500);
   }
+
 }
