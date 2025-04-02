@@ -16,7 +16,8 @@ const int ECHO_PIN = 2;
 const float SPEED_OF_LIGHT = 0.0343;
 
 //variables
-float duration, distance;  
+float duration;
+float distance;  
 
 //setup
 void setup() {  
