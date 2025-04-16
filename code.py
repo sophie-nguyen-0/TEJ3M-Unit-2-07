@@ -16,7 +16,7 @@ import servo
 # variables
 distance = 0
 servo_delay = 2
-TOO_CLOSE = 50
+TOO_CLOSE = 20
 
 # setup
 sonar = adafruit_hcsr04.HCSR04(trigger_pin = board.GP15, echo_pin = board.GP14)
