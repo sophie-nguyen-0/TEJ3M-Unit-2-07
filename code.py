@@ -15,7 +15,7 @@ import servo
 
 # variables
 distance = 0
-servo_delay = 0.5
+servo_delay = 2
 TOO_CLOSE = 50
 
 # setup
@@ -34,10 +34,8 @@ while True:
 
     # Turns on LED if an object’s distance is equal to or closer then 20 cm from the sonar
     if distance < TOO_CLOSE:
-        for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time.
-            my_servo.angle = angle
-            time.sleep(servo_delay)
+            my_servo.angle = 180
     else:
-        for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time.
-            my_servo.angle = angle
-            time.sleep(servo_delay)
+            my_servo.angle = 0
+
+    time.sleep(servo_delay)
